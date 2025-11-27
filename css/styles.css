@@ -1,0 +1,74 @@
+
+/* Layout de bază */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#222}
+.container{max-width:1200px;margin:0 auto;padding:1rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid #eee}
+.brand{font-weight:700;letter-spacing:.5px}
+.helper{font-size:.9rem;color:#6b7280}
+.actions{margin:.75rem 0}
+.btn-print{padding:.4rem .7rem;border:1px solid #d0d5dd;border-radius:.4rem;background:#fff;cursor:pointer}
+.btn-print:hover{background:#f8f9fb}
+
+/* Layout principal cu sidebar la dreapta */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:1.5rem}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.sidebar{order:-1}}
+
+/* Grid de carduri */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #eee;border-radius:.6rem;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.cover-wrap{position:relative;overflow:hidden;aspect-ratio:3/4}
+.cover-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:1rem;background:rgba(0,0,0,.62);color:#fff;opacity:0;transition:opacity .25s}
+.cover-wrap:hover .overlay,.card:focus .overlay{opacity:1}
+.meta{padding:.8rem 1rem 1rem}
+.title{font-size:1rem;margin:0 0 .25rem}
+.byline{font-size:.9rem;color:#555}
+.muted{color:#888}
+.tags{margin-top:.4rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.tag{font-size:.8rem;background:#f1f3f5;border:1px solid #e6e9ef;color:#334;padding:.1rem .45rem;border-radius:999px}
+
+/* Sidebar: căutare, sortare, filtre */
+.sidebar .box{background:#fafbfc;border:1px solid #e8e9ee;border-radius:.6rem;padding:1rem;margin-bottom:1rem}
+.sidebar h3{font-size:1rem;margin:.25rem 0 .75rem}
+.search input[type="search"]{width:100%;padding:.6rem .75rem;border:1px solid #d0d5dd;border-radius:.5rem;outline:none}
+.search input[type="search"]:focus{border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.2)}
+.count{font-size:.85rem;color:#555;padding-top:.4rem}
+
+.sort-section{list-style:none;margin:0;padding:0}
+.sort-section>li.heading{font-weight:600;color:#334;margin:.25rem 0}
+.sort{cursor:pointer;padding:.35rem .5rem;border-radius:.35rem;color:#334}
+.sort:hover{background:#eef2ff}
+.sort.active{background:#e0e7ff;font-weight:600}
+.sep{border:0;border-top:1px solid #eee;margin:.6rem 0}
+.reset{font-size:.85rem;margin-top:.25rem;cursor:pointer;color:#4154f1}
+.reset:hover{text-decoration:underline}
+
+/* Filtre */
+.filter-group{margin-top:.75rem}
+.group-title{font-weight:600;margin-bottom:.3rem}
+.filter-list{list-style:none;margin:0;padding:0;max-height:160px;overflow:auto}
+.filter-list li{margin:.2rem 0}
+.btn{margin-top:.6rem;padding:.35rem .6rem;border:1px solid #d0d5dd;border-radius:.35rem;background:#fff;cursor:pointer}
+.btn:hover{background:#f0f2f5}
+
+/* Modal detalii */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;max-width:760px;width:100%;border-radius:.6rem;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.modal header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding:.75rem 1rem}
+.modal .content{display:grid;grid-template-columns:1fr 1.2fr;gap:1rem;padding:1rem}
+@media (max-width:700px){.modal .content{grid-template-columns:1fr}}
+.modal img{width:100%;height:auto;border-radius:.4rem}
+.close{cursor:pointer;border:none;background:#fff;font-size:1.2rem}
+
+/* Print/PDF */
+@media print {
+  .sidebar, header, .actions { display:none !important; }
+  .grid { grid-template-columns:repeat(2,1fr) !important; gap:.75rem !important; }
+  .overlay { display:none !important; }
+}
