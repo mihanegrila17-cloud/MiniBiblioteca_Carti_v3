@@ -64,6 +64,8 @@ header{display:flex;justify-content:space-between;align-items:center;padding:.5r
 .modal .content{display:grid;grid-template-columns:1fr 1.2fr;gap:1rem;padding:1rem}
 @media (max-width:700px){.modal .content{grid-template-columns:1fr}}
 .modal img{width:100%;height:auto;border-radius:.4rem}
+.modal-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:.35rem;font-weight:600;color:#3655f6;text-decoration:none}
+.modal-link:hover{text-decoration:underline}
 .close{cursor:pointer;border:none;background:#fff;font-size:1.2rem}
 
 /* Print/PDF */
