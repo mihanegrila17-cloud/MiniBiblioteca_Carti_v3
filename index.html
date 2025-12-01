@@ -3,16 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='10' y='8' width='14' height='48' rx='2' fill='%23333'/%3E%3Crect x='26' y='8' width='14' height='48' rx='2' fill='%234a8'/%3E%3Crect x='42' y='8' width='12' height='48' rx='2' fill='%2376c'/%3E%3Cpath d='M10 18h14' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M26 24h14' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M42 30h12' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
-  <title>MiniBiblioteca – Prezentări de cărți</title>
+  <link rel="icon" type="image/png" href="img/LOGO_carti.png">
+  <title>Biblioteca dăruirii</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="brand">MiniBiblioteca</div>
-      <div class="helper">Caută, sortează, filtrează. Click pe o carte pentru detalii.</div>
+      <div class="brand">Biblioteca dăruirii</div>
+      <div class="helper">„Biblioteca dăruirii: cărți împărțite din dragoste, citite cu bucurie.”</div>
     </header>
+
+    <section class="library-story">
+      <div>
+        <div class="story-kicker">Povestea bibliotecii noastre</div>
+        <h1>O colecție adunată din iubire, împărțită cu bucurie</h1>
+        <p>Am început cu o singură carte primită în dar, pe care am ținut-o ca pe o promisiune: că poveștile merită să circule. Cu fiecare volum adăugat, am construit un loc în care curiozitatea, liniștea și pasiunea pentru lectură se întâlnesc.</p>
+        <p>Ținem volumele aproape, ca pe niște prieteni vechi, și le dăm mai departe cu aceeași grijă. Biblioteca dăruirii e felul nostru de a spune „uite ce ne-a mișcat pe noi, poate te va atinge și pe tine”. Dacă o carte îți rămâne în minte sau îți schimbă o zi, simțim că povestea noastră și-a atins scopul.</p>
+        <div class="story-note">Împrumutăm ca să ducem povestea mai departe: fiecare pagină ajunge la un alt cititor curios.</div>
+      </div>
+      <div class="story-visual" aria-hidden="true">
+        <img src="img/INIMA.png" alt="">
+      </div>
+    </section>
+
+    <div class="top-search box search">
+      <label for="q" class="helper">Căutare (titlu, autor, gen)</label>
+      <input id="q" type="search" placeholder="ex. Dune, Austen, distopie">
+      <div class="count"><span id="count"></span></div>
+      <div class="helper" style="margin-top:.35rem">Caută, sortează, filtrează. Click pe o carte pentru detalii.</div>
+    </div>
 
     <div class="actions">
       <button class="btn-print" onclick="window.print()">🖨️ Printează lista</button>
@@ -33,13 +53,6 @@
 
       <!-- BARA DIN DREAPTA: căutare, sortare, filtre -->
       <aside class="sidebar">
-        <!-- Căutare -->
-        <div class="box search">
-          <label for="q" class="helper">Căutare (titlu, autor, editură, gen)</label>
-          <input id="q" type="search" placeholder="ex. Dune, Austen, Polirom, distopie">
-          <div class="count"><span id="count"></span></div>
-        </div>
-
         <!-- Sortare (liste HTML) -->
         <div class="box">
           <h3>Sortare</h3>
@@ -47,12 +60,6 @@
             <li class="heading">Autor</li>
             <li class="sort" data-key="autor" data-dir="asc">A–Z</li>
             <li class="sort" data-key="autor" data-dir="desc">Z–A</li>
-          </ul>
-          <hr class="sep">
-          <ul class="sort-section">
-            <li class="heading">Editură</li>
-            <li class="sort" data-key="editura" data-dir="asc">A–Z</li>
-            <li class="sort" data-key="editura" data-dir="desc">Z–A</li>
           </ul>
           <hr class="sep">
           <ul class="sort-section">
@@ -88,9 +95,49 @@
 
           <button id="clear-filters" class="btn">Șterge filtrele</button>
         </div>
-      </aside>
+          <div class="contact-card contact-in-aside">
+      <div class="contact-details">
+                <div class="contact-item">
+          <div class="label">Telefon</div>
+          <div class="value">+40 269 000 000</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Adres?</div>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=b-dul+Victoriei%2C+Sibiu" target="_blank" rel="noopener noreferrer">
+            B-dul Victoriei, Sibiu
+          </a>
+        </div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          title="Harta B-dul Victoriei, Sibiu"
+          src="https://www.google.com/maps?q=b-dul%20Victoriei%2C%20Sibiu&output=embed"
+          allowfullscreen
+          loading="lazy"></iframe>
+      </div>
+    </div>
+</aside>
     </div>
   </div>
+
+  <footer class="site-footer">
+    <div class="footer-blurb">
+      <div class="footer-title">Biblioteca dăruirii</div>
+      <p class="footer-text">Împărțim cărți și povești, una câte una, pentru cei care iubesc să citească.</p>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-card">
+        <div class="footer-title">Recomandă o carte</div>
+        <p class="footer-text">Ai un titlu care te-a atins? Scrie-ne și îl adăugăm în listă.</p>
+        <a class="footer-link" href="mailto:contact@bibliotecadaruirii.ro">contact@bibliotecadaruirii.ro</a>
+      </div>
+      <div class="footer-card">
+        <div class="footer-title">Accesibilitate</div>
+        <p class="footer-text">Preferi PDF/EPUB sau font mai mare? Spune-ne și te ajutăm.</p>
+        <a class="footer-link" href="mailto:contact@bibliotecadaruirii.ro?subject=Format%20accesibil">Cere un format accesibil</a>
+      </div>
+    </div>
+  </footer>
 
   <!-- MODAL Detalii -->
   <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
@@ -104,11 +151,14 @@
         <div>
           <p id="modalByline" class="helper" style="margin-top:.2rem"></p>
           <p id="modalDescr" style="line-height:1.5"></p>
-          <a id="modalLink" class="modal-link" href="#" target="_blank" rel="noopener noreferrer" style="display:none">Deschide link</a>
+          <button id="modalAuthorBtn" class="btn-author" type="button" style="display:none">Despre autor</button>
+          <p id="modalAuthorInfo" class="modal-author" style="display:none"></p>
         </div>
       </div>
     </div>
   </div>
+
+  
 
   <script src="app.js"></script>
 </body>
