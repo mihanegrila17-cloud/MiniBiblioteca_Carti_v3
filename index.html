@@ -1,33 +1,32 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/LOGO_carti.png">
   <title>Biblioteca dăruirii</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="brand">Biblioteca dăruirii</div>
-      <div class="helper">„Biblioteca dăruirii: cărți împărțite din dragoste, citite cu bucurie.”</div>
+      <div class="main-nav-bar">
+        <div class="nav-row">
+          <div class="brand brand-badge">Biblioteca dăruirii</div>
+          <nav class="main-nav">
+            <a href="#Căutare">Căutare cărți</a>
+            <a href="story.html">Povestea noastrăă</a>
+            <a href="contact.html">Contact</a>
+            <a href="anticariat.html">Anticariat</a>
+            <a href="evenimente.html">Evenimente</a>
+          </nav>
+        </div>
+        <div class="helper">„Biblioteca dăruirii: cărți împărțite din dragoste, citite cu bucurie.”</div>
+      </div>
     </header>
+        
 
-    <section class="library-story">
-      <div>
-        <div class="story-kicker">Povestea bibliotecii noastre</div>
-        <h1>O colecție adunată din iubire, împărțită cu bucurie</h1>
-        <p>Am început cu o singură carte primită în dar, pe care am ținut-o ca pe o promisiune: că poveștile merită să circule. Cu fiecare volum adăugat, am construit un loc în care curiozitatea, liniștea și pasiunea pentru lectură se întâlnesc.</p>
-        <p>Ținem volumele aproape, ca pe niște prieteni vechi, și le dăm mai departe cu aceeași grijă. Biblioteca dăruirii e felul nostru de a spune „uite ce ne-a mișcat pe noi, poate te va atinge și pe tine”. Dacă o carte îți rămâne în minte sau îți schimbă o zi, simțim că povestea noastră și-a atins scopul.</p>
-        <div class="story-note">Împrumutăm ca să ducem povestea mai departe: fiecare pagină ajunge la un alt cititor curios.</div>
-      </div>
-      <div class="story-visual" aria-hidden="true">
-        <img src="img/INIMA.png" alt="">
-      </div>
-    </section>
-
-    <div class="top-search box search">
+    <div id="Căutare" class="top-search box search">
       <label for="q" class="helper">Căutare (titlu, autor, gen)</label>
       <input id="q" type="search" placeholder="ex. Dune, Austen, distopie">
       <div class="count"><span id="count"></span></div>
@@ -95,46 +94,38 @@
 
           <button id="clear-filters" class="btn">Șterge filtrele</button>
         </div>
-          <div class="contact-card contact-in-aside">
-      <div class="contact-details">
-                <div class="contact-item">
-          <div class="label">Telefon</div>
-          <div class="value">+40 269 000 000</div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Adres?</div>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=b-dul+Victoriei%2C+Sibiu" target="_blank" rel="noopener noreferrer">
-            B-dul Victoriei, Sibiu
-          </a>
-        </div>
-      </div>
-      <div class="map-embed">
-        <iframe
-          title="Harta B-dul Victoriei, Sibiu"
-          src="https://www.google.com/maps?q=b-dul%20Victoriei%2C%20Sibiu&output=embed"
-          allowfullscreen
-          loading="lazy"></iframe>
-      </div>
-    </div>
-</aside>
+          </aside>
     </div>
   </div>
 
   <footer class="site-footer">
-    <div class="footer-blurb">
-      <div class="footer-title">Biblioteca dăruirii</div>
-      <p class="footer-text">Împărțim cărți și povești, una câte una, pentru cei care iubesc să citească.</p>
-    </div>
-    <div class="footer-grid">
+    <div class="footer-grid footer-center">
       <div class="footer-card">
-        <div class="footer-title">Recomandă o carte</div>
-        <p class="footer-text">Ai un titlu care te-a atins? Scrie-ne și îl adăugăm în listă.</p>
+        <div class="footer-title">Contact</div>
+        <p class="footer-text">Telefon: +40 269 000 000</p>
         <a class="footer-link" href="mailto:contact@bibliotecadaruirii.ro">contact@bibliotecadaruirii.ro</a>
       </div>
       <div class="footer-card">
-        <div class="footer-title">Accesibilitate</div>
-        <p class="footer-text">Preferi PDF/EPUB sau font mai mare? Spune-ne și te ajutăm.</p>
-        <a class="footer-link" href="mailto:contact@bibliotecadaruirii.ro?subject=Format%20accesibil">Cere un format accesibil</a>
+        <div class="footer-title">Rețele de socializare</div>
+        <div class="social-links">
+          <a class="footer-link icon-link facebook" href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17 22 12Z"/></svg>
+            Facebook
+          </a>
+          <a class="footer-link icon-link instagram" href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A4.5 4.5 0 1 1 7.5 11 4.5 4.5 0 0 1 12 6.5Zm0 2A2.5 2.5 0 1 0 14.5 11 2.5 2.5 0 0 0 12 8.5Zm5.25-2.75a.75.75 0 1 1-.75.75.75.75 0 0 1 .75-.75Z"/></svg>
+            Instagram
+          </a>
+          <a class="footer-link icon-link tiktok" href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 3c0 .3.02.6.06.9a5.5 5.5 0 0 0 4.1 4.2c.27.08.55.13.84.15v2.35c-1.63-.08-3.13-.73-4.32-1.77v5.58a4.95 4.95 0 1 1-4.95-4.95c.18 0 .36.01.54.03v2.36a2.3 2.3 0 1 0 1.48 2.16V3h2.25Z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+      <div class="footer-card">
+        <div class="footer-title">Program</div>
+        <p class="footer-text">Luni – Sâmbătă: 10:00 – 18:00</p>
+        <p class="footer-text" style="margin-top:.1rem">Duminică: 11:00 – 15:00</p>
       </div>
     </div>
   </footer>
@@ -160,6 +151,12 @@
 
   
 
-  <script src="app.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
