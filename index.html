@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html lang="ro">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,24 +8,28 @@
   <title>Biblioteca dăruirii</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="main-nav-bar">
         <div class="nav-row">
           <div class="brand brand-badge">Biblioteca dăruirii</div>
+          <button class="hamburger" aria-label="Deschide meniul" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
           <nav class="main-nav">
             <a href="#Căutare">Căutare cărți</a>
-            <a href="story.html">Povestea noastrăă</a>
+            <a href="story.html">Povestea noastră</a>
             <a href="contact.html">Contact</a>
             <a href="anticariat.html">Anticariat</a>
             <a href="evenimente.html">Evenimente</a>
           </nav>
         </div>
-        <div class="helper">„Biblioteca dăruirii: cărți împărțite din dragoste, citite cu bucurie.”</div>
+        <div class="helper nav-quote">„Cărți împărțite din dragoste, citite cu bucurie”</div>
       </div>
     </header>
-        
+
 
     <div id="Căutare" class="top-search box search">
       <label for="q" class="helper">Căutare (titlu, autor, gen)</label>
@@ -40,7 +45,7 @@
     <div class="layout">
       <!-- CONȚINUT PRINCIPAL: grila de cărți -->
       <main>
-                <div id="grid" class="grid">
+        <div id="grid" class="grid">
           <!-- Cardurile se genereaza dinamic din JS -->
         </div>
 
@@ -78,15 +83,15 @@
         <!-- Filtre (Autor / Gen) -->
         <div class="box">
           <h3>Filtre</h3>
-          <div class="helper">Bifează unul sau mai multe criterii.</div>
+          <div class="helper nav-quote">„Cărți împărțite din dragoste, citite cu bucurie”</div>
 
-                    <div class="filter-group">
+          <div class="filter-group">
             <div class="group-title">Autor</div>
             <ul class="filter-list" id="authorFilters"></ul>
           </div>
 
 
-                    <div class="filter-group">
+          <div class="filter-group">
             <div class="group-title">Gen</div>
             <ul class="filter-list" id="genreFilters"></ul>
           </div>
@@ -94,7 +99,7 @@
 
           <button id="clear-filters" class="btn">Șterge filtrele</button>
         </div>
-          </aside>
+      </aside>
     </div>
   </div>
 
@@ -109,15 +114,24 @@
         <div class="footer-title">Rețele de socializare</div>
         <div class="social-links">
           <a class="footer-link icon-link facebook" href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17 22 12Z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17 22 12Z" />
+            </svg>
             Facebook
           </a>
           <a class="footer-link icon-link instagram" href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A4.5 4.5 0 1 1 7.5 11 4.5 4.5 0 0 1 12 6.5Zm0 2A2.5 2.5 0 1 0 14.5 11 2.5 2.5 0 0 0 12 8.5Zm5.25-2.75a.75.75 0 1 1-.75.75.75.75 0 0 1 .75-.75Z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A4.5 4.5 0 1 1 7.5 11 4.5 4.5 0 0 1 12 6.5Zm0 2A2.5 2.5 0 1 0 14.5 11 2.5 2.5 0 0 0 12 8.5Zm5.25-2.75a.75.75 0 1 1-.75.75.75.75 0 0 1 .75-.75Z" />
+            </svg>
             Instagram
           </a>
           <a class="footer-link icon-link tiktok" href="#" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 3c0 .3.02.6.06.9a5.5 5.5 0 0 0 4.1 4.2c.27.08.55.13.84.15v2.35c-1.63-.08-3.13-.73-4.32-1.77v5.58a4.95 4.95 0 1 1-4.95-4.95c.18 0 .36.01.54.03v2.36a2.3 2.3 0 1 0 1.48 2.16V3h2.25Z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M13.5 3c0 .3.02.6.06.9a5.5 5.5 0 0 0 4.1 4.2c.27.08.55.13.84.15v2.35c-1.63-.08-3.13-.73-4.32-1.77v5.58a4.95 4.95 0 1 1-4.95-4.95c.18 0 .36.01.54.03v2.36a2.3 2.3 0 1 0 1.48 2.16V3h2.25Z" />
+            </svg>
             TikTok
           </a>
         </div>
@@ -149,14 +163,9 @@
     </div>
   </div>
 
-  
+
 
   <script src="main.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-

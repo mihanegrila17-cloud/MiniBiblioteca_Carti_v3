@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const placeholderImg = 'img/placeholder.svg';
   const shelfByGenre = {
     Psihologic: 'Raft A1',
@@ -290,3 +290,19 @@
   renderFilters();
   applyFiltersAndSearch();
 })();
+
+// Hamburger menu toggle for mobile
+const hamburger = document.querySelector(".hamburger");
+const body = document.body;
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    const open = body.classList.toggle("nav-open");
+    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900 && body.classList.contains("nav-open")) {
+      body.classList.remove("nav-open");
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+  });
+}

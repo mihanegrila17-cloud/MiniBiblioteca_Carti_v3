@@ -43,6 +43,49 @@ body::before{
   gap: 1rem;
   width: 100%
 }
+.hamburger{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:10px;
+  background:transparent;
+  cursor:pointer;
+}
+.hamburger span{
+  display:block;
+  height:3px;
+  width:100%;
+  background:#fff;
+  border-radius:4px;
+}
+@media(max-width:900px){
+  .hamburger{display:flex;}
+  .main-nav{
+    display:none !important;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.5rem;
+    background:#5b3315;
+    padding:.75rem;
+    border-radius:10px;
+    width:100%;
+    position:absolute;
+    top:100%;
+    left:0;
+    z-index:50;
+  }
+  body.nav-open .main-nav{
+    display:flex !important;
+  }
+  .nav-row{
+    align-items:flex-start;
+    position:relative;
+  }
+}
 
 header {
   display: flex;
@@ -67,7 +110,7 @@ header {
 .brand {
   font-weight: 700;
   letter-spacing: .5px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: 'Segoe Script', 'Lucida Handwriting', 'Pacifico', 'Brush Script MT', cursive
 }
 
@@ -81,14 +124,23 @@ header {
 
 .helper {
   font-size: .95rem;
-  color: #991b1b;
+  color: #1f2937;
   text-align: left;
-  background: rgba(254, 226, 226, .9);
+  background: #fff;
   padding: .4rem .8rem;
   border-radius: 12px;
   display: block;
-  box-shadow: 0 6px 16px rgba(248, 113, 113, .2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
   margin-top: .1rem
+}
+.nav-quote{
+  color:#fff;
+  background:transparent;
+  box-shadow:none;
+  font-family:'Segoe Script','Lucida Handwriting','Pacifico','Brush Script MT',cursive;
+  font-size:1rem;
+  letter-spacing:.02em;
+  padding:0;
 }
 
 .main-nav {
@@ -880,7 +932,15 @@ header {
   box-shadow: 0 10px 26px rgba(193, 136, 77, .14);
   max-width: 520px;
   width: 100%;
-  flex: 1 1 320px
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+.form-card .btn{
+  align-self:center;
+  display:inline-block;
+  margin-top:.25rem;
 }
 
 .form-panel {
@@ -936,13 +996,13 @@ header {
 }
 
 .btn.primary {
-  background: #7c3aed;
+  background: #7a4a24;
   color: #fff;
-  border: 1px solid #6d28d9
+  border: 1px solid #6a3f1f
 }
 
 .btn.primary:hover {
-  background: #6d28d9
+  background: #6a3f1f
 }
 
 .form-status {
@@ -998,6 +1058,14 @@ header {
   font-size:1.55rem;
   letter-spacing:.03em;
   text-shadow:0 1px 2px rgba(0,0,0,.12);
+}
+.story-title{
+  font-family:'Segoe Script','Lucida Handwriting','Pacifico','Brush Script MT',cursive;
+  color:#5b3315;
+  font-size:1.55rem;
+  letter-spacing:.03em;
+  text-shadow:0 1px 2px rgba(0,0,0,.12);
+  margin:0 0 .4rem;
 }
 
 .info-section p {

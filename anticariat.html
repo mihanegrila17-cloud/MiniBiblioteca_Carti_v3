@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/LOGO_carti.png">
-  <title>Anticariat — Biblioteca dăruirii</title>
+  <title>Anticariat - Biblioteca dăruirii</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -13,55 +13,58 @@
       <div class="main-nav-bar">
         <div class="nav-row">
           <div class="brand brand-badge">Biblioteca dăruirii</div>
+          <button class="hamburger" aria-label="Deschide meniul" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
           <nav class="main-nav">
-            <a href="index.html#Căutare">Căutare cărți</a>
+            <a href="index.html#cautare">Căutare cărți</a>
             <a href="story.html">Povestea noastră</a>
             <a href="contact.html">Contact</a>
             <a href="anticariat.html" class="active">Anticariat</a>
             <a href="evenimente.html">Evenimente</a>
           </nav>
         </div>
-        <div class="helper">„Biblioteca dăruirii: cărți împărțite din dragoste, citite cu bucurie.”</div>
+        <div class="helper nav-quote">„Cărți împărțite din dragoste, citite cu bucurie”</div>
       </div>
     </header>
     <div class="back-link-wrap">
-      <a class="back-btn" href="index.html">Înapoi la pagina principală</a>
+      <a class="back-btn" href="index.html">← Înapoi</a>
     </div>
 
     <section class="info-section" style="margin-top:1rem">
-      <h2>Anticariat</h2>
-      <p>Descoperă volume cu patină de timp, ediții vechi și comori care abia așteaptă un nou raft. Selectăm cu grijă titluri clasice, ediții speciale și surprize care să-ți completeze colecția.</p>
+      <h2 class="story-title">Anticariat</h2>
+      <p>Descoperă volume cu patina timpului, ediții vechi și comori care abia așteaptă un nou raft. Selectăm cu grijă titluri clasice, ediții speciale și surprize care să-ți completeze colecția.</p>
       <p>Pentru rezervări sau întrebări despre stoc, scrie-ne la <a href="mailto:contact@bibliotecadaruirii.ro">contact@bibliotecadaruirii.ro</a> sau sună-ne la <strong>+40 269 000 000</strong>.</p>
       <p class="story-note">Dacă ai volume pe care vrei să le donezi, spune-ne. Împreună le dăm o a doua viață.</p>
 
       <hr class="section-divider">
 
-      <h2>Caută un titlu în anticariat</h2>
+      <h2 class="story-title">Caută un titlu în anticariat</h2>
       <p>Introdu titlul sau autorul; lista nu este vizibilă, dar câmpul include titlurile disponibile acum.</p>
       <div class="top-search box search" style="margin-top:.5rem">
         <label for="q-anticariat" class="helper">Căutare anticariat (titlu, autor)</label>
         <input id="q-anticariat" list="anticariat-list" type="search" placeholder="ex. Dune, Austen, Dostoievski">
         <datalist id="anticariat-list">
-          <option value="Alchimistul — Paulo Coelho">
-          <option value="Maestrul și Margareta — M. Bulgakov">
-          <option value="Hoțul de cărți — Markus Zusak">
-          <option value="Mic dejun la Tiffany — Truman Capote">
-          <option value="Fahrenheit 451 — Ray Bradbury">
-          <option value="Shogun — James Clavell">
-          <option value="Pe aripile vântului — Margaret Mitchell">
-          <option value="Portretul lui Dorian Gray — Oscar Wilde">
-          <option value="Bătrânul și marea — Ernest Hemingway">
-          <option value="Mizerabilii — Victor Hugo">
-          <option value="Un veac de singurătate — Gabriel García Márquez">
-          <option value="Marele Gatsby — F. Scott Fitzgerald">
-          <option value="To Kill a Mockingbird — Harper Lee">
-          <option value="Stăpânul inelelor — J.R.R. Tolkien">
-          <option value="Călăuza — Arkadi și Boris Strugațki">
-          <option value="Solaris — Stanisław Lem">
-          <option value="Doamna Bovary — Gustave Flaubert">
-          <option value="Jane Eyre — Charlotte Brontë">
-          <option value="Contele de Monte Cristo — Alexandre Dumas">
-          <option value="Lovitura de grație — Marguerite Yourcenar">
+          <option value="Alchimistul - Paulo Coelho">
+          <option value="Maestrul și Margareta - M. Bulgakov">
+          <option value="Hoțul de cărți - Markus Zusak">
+          <option value="Mic dejun la Tiffany - Truman Capote">
+          <option value="Fahrenheit 451 - Ray Bradbury">
+          <option value="Shogun - James Clavell">
+          <option value="Pe aripile vântului - Margaret Mitchell">
+          <option value="Portretul lui Dorian Gray - Oscar Wilde">
+          <option value="Bătrânul și marea - Ernest Hemingway">
+          <option value="Mizerabilii - Victor Hugo">
+          <option value="Un veac de singurătate - Gabriel García Márquez">
+          <option value="Marele Gatsby - F. Scott Fitzgerald">
+          <option value="To Kill a Mockingbird - Harper Lee">
+          <option value="Stăpânul inelelor - J.R.R. Tolkien">
+          <option value="Călăuza - Arkadi și Boris Strugațki">
+          <option value="Solaris - Stanislaw Lem">
+          <option value="Doamna Bovary - Gustave Flaubert">
+          <option value="Jane Eyre - Charlotte Brontë">
+          <option value="Contele de Monte Cristo - Alexandre Dumas">
+          <option value="Lovitură de grație - Marguerite Yourcenar">
         </datalist>
         <div class="helper" style="margin-top:.35rem">Dacă titlul nu apare în sugestii, scrie-ne și îl căutăm pentru tine.</div>
         <div id="anticariat-status" class="helper" style="display:none;margin-top:.4rem"></div>
@@ -101,21 +104,39 @@
   </footer>
 
   <script>
-    const anticInput = document.getElementById('q-anticariat');
-    const anticStatus = document.getElementById('anticariat-status');
-    if (anticInput && anticStatus) {
-      anticInput.addEventListener('change', () => {
-        const val = anticInput.value.trim();
-        if (val) {
-          anticStatus.textContent = `"${val}" este disponibilă la raftul Anticariat. Te așteptăm să o ridici.`;
-          anticStatus.style.display = 'block';
-        } else {
-          anticStatus.style.display = 'none';
-          anticStatus.textContent = '';
+    // hamburger toggle
+    (function () {
+      const hamburger = document.querySelector('.hamburger');
+      if (!hamburger) return;
+      const body = document.body;
+      hamburger.addEventListener('click', () => {
+        const open = body.classList.toggle('nav-open');
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900 && body.classList.contains('nav-open')) {
+          body.classList.remove('nav-open');
+          hamburger.setAttribute('aria-expanded', 'false');
         }
       });
-    }
+    })();
+
+    // anticariat status
+    (function () {
+      const input = document.getElementById('q-anticariat');
+      const status = document.getElementById('anticariat-status');
+      if (!input || !status) return;
+      input.addEventListener('input', () => {
+        const val = input.value.trim();
+        if (!val) {
+          status.style.display = 'none';
+          status.textContent = '';
+          return;
+        }
+        status.style.display = 'block';
+        status.textContent = `„${val}” este disponibilă la raftul de anticariat și te așteaptă să o ridici.`;
+      });
+    })();
   </script>
 </body>
 </html>
-
